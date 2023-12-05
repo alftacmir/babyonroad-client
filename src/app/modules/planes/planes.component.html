@@ -1,0 +1,9 @@
+<p>Hola Mundo</p>
+<div class="card" style="width: 18rem;" *ngFor="let plan of planes">
+    <div class="card-body">
+      <h5 class="card-title">{{plan.nombre}}</h5>
+      <p class="card-text">{{plan.precio}}€</p>
+      <p class="card-text">{{plan.descripcion}}</p>
+      <a href="#" class="btn btn-primary">Reservar</a>
+    </div>
+  </div>

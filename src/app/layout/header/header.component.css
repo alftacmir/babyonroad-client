@@ -1,0 +1,22 @@
+/* header.component.css */
+header {
+    background-color: #BB7D5F;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 15px;
+    padding: 0px;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
