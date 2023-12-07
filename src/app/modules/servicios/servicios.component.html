@@ -1,1 +1,14 @@
-<p>servicios works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 p-5 text-center" *ngFor="let servicio of servicios; let i = index">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{servicio.nombre}}</h5>
+          <p class="card-text">{{servicio.precio}}€</p>
+          <p class="card-text">{{servicio.descripcion}}</p>
+          <a href="#" class="btn btn-primary">Reservar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

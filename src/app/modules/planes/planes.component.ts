@@ -9,9 +9,9 @@ import { PlanesService } from '../../services/planes.service';
 })
 export class PlanesComponent implements OnInit{
 
-  planes:any;
+  public "planes":Plan[];
 
-  constructor(private planService:PlanesService){
+  constructor(private planesService:PlanesService){
     
   }
 
@@ -19,13 +19,10 @@ export class PlanesComponent implements OnInit{
 
   ngOnInit(): void {
     this.obtenerPlanes();
-
   }
 
   private obtenerPlanes(){
-    this.planService.obtenerListaPlanes().subscribe( (dato) => {
-      this.planes = dato;
-    });
+    this.planesService.obtenerListaPlanes().subscribe(dato => {this.planes = dato});
   }
 
  

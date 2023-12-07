@@ -13,6 +13,7 @@ import { AboutusComponent } from './modules/aboutus/aboutus.component';
 import { PerfilComponent } from './modules/perfil/perfil.component';
 import { RegisterComponent } from './modules/register/register.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { RegistrarPlanComponent } from './modules/planes/registrar-plan/registrar-plan.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
     AboutusComponent,
     PerfilComponent,
     RegisterComponent,
+    RegistrarPlanComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient()
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent]
 })
