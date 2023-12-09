@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="text-center p-5">Actualizar Plan</h2>
+    <form (ngSubmit)="onSubmit()" #PlanForm="ngForm">
+        <div class="col-5 mb-3 mx-auto">
+            <label for="nombre" class="form-label">Nombre : </label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="plan.nombre" name="nombre" #nombre = "ngModel">
+        </div>
+        <div class="col-5 mb-3 mx-auto ">
+            <label for="precio" class="form-label">Precio : </label>
+            <input type="text" class="form-control" id="precio" [(ngModel)]="plan.precio" name="precio" #precio = "ngModel">
+        </div>
+        <div class="col-5 mb-3 mx-auto">
+            <label for="descripcion" class="form-label">Descripción del plan</label>
+            <textarea type="text" class="form-control" id="descripcion" [(ngModel)]="plan.descripcion" name="descripcion"
+                rows="3" #descripcion = "ngModel"></textarea>
+        </div>
+        <div class="col-5 mb-3 mx-auto text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+    </form>
+
+</div>

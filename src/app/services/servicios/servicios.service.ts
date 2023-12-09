@@ -8,13 +8,13 @@ import { Servicio } from '../../classes/servicio/servicio';
 })
 export class ServiciosService {
 
-  private baseURL = 'http://localhost:9000/lista_servicios/todos';
+  private baseURL = 'http://localhost:9000/lista_servicios';
 
 
   constructor(private httpClient:HttpClient) { }
 
   obtenerListaServicios(): Observable<Servicio[]> {
-    return this.httpClient.get<Servicio[]>(`${this.baseURL}`);
+    return this.httpClient.get<Servicio[]>(`${this.baseURL}`+`/todos`);
   }
 
 }

@@ -3,15 +3,17 @@
     <img src="assets\images\logo.jpg" alt="Logo" />
   </div>
   <div class="container text-center">
-    <div class="mb-3 col-5 mx-auto">
-      <label for="formGroupExampleInput" class="form-label">Introduce aquí tu usuario</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Usuario" />
-    </div>
-    <div class="mb-3 col-5 mx-auto">
-      <label for="formGroupExampleInput2" class="form-label">Introduce aquí tu contraseña</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Contraseña" />
-    </div>
+    <form (ngSubmit)="onSubmit()" #LoginForm="ngForm">
+      <div class="mb-3 col-5 mx-auto">
+        <label for="usuario" class="form-label">Introduce aquí tu usuario</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario.nombre_Usuario" id="usuario" name="usuario" placeholder="Usuario"/>
+      </div>
+      <div class="mb-3 col-5 mx-auto">
+        <label for="contrasena" class="form-label">Introduce aquí tu contraseña</label>
+        <input type="password" class="form-control" [(ngModel)]="usuario.contrasena" id="contrasena" name="contrasena" placeholder="Contraseña"/>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Entrar</button>
+    </form>
   </div>
-  <p>Si no estás registrado aún. <a href="/register">Pulsa aquí</a></p>
-  <button type="button" class="btn btn-outline-primary">Entrar</button>
+  <p class="p-4">Si no estás registrado aún. <a href="/register">Pulsa aquí</a></p>
 </div>

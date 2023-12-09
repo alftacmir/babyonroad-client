@@ -14,6 +14,8 @@ import { PerfilComponent } from './modules/perfil/perfil.component';
 import { RegisterComponent } from './modules/register/register.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { RegistrarPlanComponent } from './modules/planes/registrar-plan/registrar-plan.component';
+import { FormsModule } from '@angular/forms';
+import { ActualizarPlanComponent } from './modules/planes/actualizar-plan/actualizar-plan.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { RegistrarPlanComponent } from './modules/planes/registrar-plan/registra
     PerfilComponent,
     RegisterComponent,
     RegistrarPlanComponent,
+    ActualizarPlanComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

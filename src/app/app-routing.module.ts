@@ -6,12 +6,16 @@ import { PlanesComponent } from './modules/planes/planes.component';
 import { AboutusComponent } from './modules/aboutus/aboutus.component';
 import { RegisterComponent } from './modules/register/register.component';
 import { EsqueletoComponent } from './layout/esqueleto/esqueleto.component';
+import { RegistrarPlanComponent } from './modules/planes/registrar-plan/registrar-plan.component';
+import { ActualizarPlanComponent } from './modules/planes/actualizar-plan/actualizar-plan.component';
 
 const routes: Routes = [
   { path: '', component: EsqueletoComponent},
   { path: 'login', component: LoginComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'planes', component: PlanesComponent },
+  { path: 'planes/nuevo', component: RegistrarPlanComponent},
+  { path: 'planes/actualizar/:id', component: ActualizarPlanComponent},
   { path: 'about', component: AboutusComponent },
   { path: 'register', component: RegisterComponent}
     
