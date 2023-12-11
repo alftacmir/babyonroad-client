@@ -11,12 +11,15 @@ import { Router } from '@angular/router';
 export class PlanesComponent implements OnInit {
   planes: Plan[];
 
-  mostrarBoton:boolean = false;
+  mostrarBoton = false;
 
   constructor(private planesService: PlanesService, private router: Router) {}
 
   ngOnInit(): void {
     this.obtenerPlanes();
+    if (sessionStorage.getItem('rol')?.match('ADMIN')){
+      this.mostrarBoton = true;
+    }
   }
 
   actualizarPlan(id: number) {

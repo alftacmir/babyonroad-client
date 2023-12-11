@@ -1,42 +1,48 @@
 <div class="container p-5">
-    <form class="row g-3">
+    <form (ngSubmit)="onSubmit()" class="row g-3">
         <div class="col-6">
-            <label for="nombreCompleto" class="form-label">Nombre completo:</label>
-            <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Ejemplo">
+            <label for="nombre" class="form-label">Nombre :</label>
+            <input type="text" class="form-control" required [(ngModel)]="cliente.nombre" #nombre = "ngModel" id="nombre" placeholder="Nombre Ejemplo">
           </div>
         <div class="col-6">
             <label for="apellidos" class="form-label">Apellidos:</label>
-            <input type="text" class="form-control" id="apellidos" placeholder="Apellidos Ejemplo">
+            <input type="text" class="form-control" required [(ngModel)]="cliente.apellidos" #apellidos = "ngModel" id="apellidos" placeholder="Apellidos Ejemplo">
           </div>
         <div class="col-12">
           <label for="correoElectronico" class="form-label">Correo Electrónico</label>
-          <input type="text" class="form-control" id="correoElectronico" placeholder="ejemplo@ejemplo.com">
+          <input type="email" class="form-control" required [(ngModel)]="cliente.correo_electronico" #correo_electronico = "ngModel" id="correoElectronico" placeholder="ejemplo@ejemplo.com">
+        </div>
+        <div class="col-6">
+          <label for="dni" class="form-label">DNI:</label>
+          <input type="text" class="form-control" required [(ngModel)]="cliente.nif" #nif = "ngModel" id="dni" placeholder="12345678A">
+        </div>
+      <div class="col-6">
+          <label for="telefono" class="form-label">Telefono:</label>
+          <input type="tel" class="form-control" required [(ngModel)]="cliente.telefono" #telefono = "ngModel" id="telefono" placeholder="666111333">
         </div>
         <div class="col-12">
           <label for="usuario" class="form-label">Usuario</label>
-          <input type="text" class="form-control" id="usuario" placeholder="usuario-ejemplo">
+          <input type="text" class="form-control" id="usuario" required [(ngModel)]="usuario.nombre_Usuario" #nombre_Usuario = "ngModel" placeholder="usuario-ejemplo">
         </div>
         <div class="col-12">
             <label for="contrasena" class="form-label">Contraseña</label>
-            <input type="text" class="form-control" id="contrasena" >
+            <input type="text" class="form-control" required [(ngModel)]="usuario.contrasena" #nombre_Usuario = "ngModel" id="contrasena" >
           </div>
           <div class="col-12">
             <label for="contrasenaCheck" class="form-label">Repita su contraseña</label>
             <input type="text" class="form-control" id="contrasenaCheck" >
           </div>
-        <div class="col-md-6">
-          <label for="direccion" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="direccion" placeholder="C/ Calle de ejemplo">
+        <div class="col-md-8">
+          <label for="direccion" class="form-label">Calle</label>
+          <input type="text" class="form-control" required [(ngModel)]="direccion.calle" #calle = "ngModel" id="direccion" placeholder="C/ Calle de ejemplo">
+        </div>
+        <div class="col-md-8">
+          <label for="localidad" class="form-label">Localidad</label>
+          <input type="text" class="form-control" required [(ngModel)]="direccion.localidad" #localidad = "ngModel" id="localidad" placeholder="C/ Calle de ejemplo">
         </div>
         <div class="col-md-2">
           <label for="numero" class="form-label">Número</label>
-          <input type="number" class="form-control" id="numero" >
-        </div>
-        <div class="col-md-2">
-            <label for="piso" class="form-label">Piso</label>
-            <input type="text" class="form-control" id="piso">
-          </div>
-        <div class="col-12">
+          <input type="number" class="form-control"required [(ngModel)]="direccion.numero" #numero = "ngModel" id="numero" >
         </div>
         <div class="col-12 text-center">
           <button type="submit" class="btn btn-primary">Registrarse</button>

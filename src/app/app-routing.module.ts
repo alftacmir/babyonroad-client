@@ -8,6 +8,7 @@ import { RegisterComponent } from './modules/register/register.component';
 import { EsqueletoComponent } from './layout/esqueleto/esqueleto.component';
 import { RegistrarPlanComponent } from './modules/planes/registrar-plan/registrar-plan.component';
 import { ActualizarPlanComponent } from './modules/planes/actualizar-plan/actualizar-plan.component';
+import { PerfilComponent } from './modules/perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', component: EsqueletoComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'planes/nuevo', component: RegistrarPlanComponent},
   { path: 'planes/actualizar/:id', component: ActualizarPlanComponent},
   { path: 'about', component: AboutusComponent },
-  { path: 'register', component: RegisterComponent}
+  { path: 'register', component: RegisterComponent},
+  { path: 'perfil', component: PerfilComponent}
     
 ];
 

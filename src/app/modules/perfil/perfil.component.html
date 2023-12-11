@@ -1,1 +1,34 @@
-<p>perfil works!</p>
+<div class="container p-5">
+    <h2 class="text-center">Datos del usuario</h2>
+    <div class="container mt-5">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Nombre:</strong>   {{cliente.nombre}}
+          </li>
+          <li class="list-group-item">
+            <strong>Apellidos:</strong>   {{cliente.apellidos}} 
+          </li>
+          <li class="list-group-item">
+            <strong>Teléfono:</strong>   {{cliente.telefono}}
+          </li>
+          <li class="list-group-item">
+            <strong>DNI:</strong>   {{cliente.nif}}
+          </li>
+          <li class="list-group-item">
+            <strong>Direccion:</strong>   {{cliente.direccion.calle}}, {{cliente.direccion.numero}}
+          </li>
+          <li class="list-group-item">
+            <strong>Localidad:</strong>   {{cliente.direccion.localidad}}, {{cliente.direccion.provincia}} 
+          </li>
+          <li class="list-group-item">
+            <strong>Usuario:</strong>   {{cliente.usuario.nombre_Usuario}}
+          </li>
+          <li class="list-group-item">
+            <strong>Tipo:</strong>   {{cliente.usuario.rol.tipoRol}}
+          </li>
+        </ul>
+      </div>
+      <div class="text-center p-5">
+      <button (click)="cerrarSesion()" type="button" class="btn btn-danger">Cerrar Sesión</button>
+    </div>
+</div>
